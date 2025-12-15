@@ -80,7 +80,12 @@ main {
 .box-content {
   background-color: pink;
   border: solid 1px #666;
-  margin: 5px;
   grid-template-columns: 3fr;
-    grid-area: section;
+  grid-area: section;
+}
+
+aside {
+  background-color: beige;
+  border: solid 1px #666;
+  grid-area: sidebar;
 }
