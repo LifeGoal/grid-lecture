@@ -1,66 +1,86 @@
 /** Not allowed to change this initial CSS code **/
 body {
-	background: url(../img/12_col.gif) center top repeat-y;
-	background-size: 90%;
+  background: url(../img/12_col.gif) center top repeat-y;
+  background-size: 90%;
 }
 /*************************************************/
 
 /* Grids area */
 .container-3 {
-    border:1px solid #333;
-    min-height: 300px;
-    width: 90%;
-    margin: 20px;
+  border: 1px solid #333;
+  min-height: 900px;
+  width: 90%;
+  margin: 20px;
 
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
 
-
-    /* 
+  /* 
     Some rules that are required for grid-areas to work:
     1. All rows need to have equal amount of values
     2. Must manage all children inside of container, when using grid-areas
     3. Need declare grid-area in every child, so that it is effected by grid-template-areas
     4. May only create sections with 4 corners, meaning squares and rectangles
     */
-    grid-template-areas: 
-        "header header header header "
-        "section section section sidebar"
-        "footer footer footer footer";
+  grid-template-areas:
+    "header header header header "
+    "boxes boxes boxes boxes"
+    "section section section sidebar"
+    "footer footer footer footer";
 
-    gap: 10px;
-    padding: 10px;
+  gap: 10px;
+  padding: 10px;
 }
 
 header {
-    background-color: skyblue;
-    grid-area: header;
+  background-color: skyblue;
+  grid-area: header;
 }
 
 aside {
-    background-color: beige;
-    grid-area: sidebar;
+  background-color: beige;
+  grid-area: sidebar;
 }
 
 main {
-    background-color: lightgreen;
-    grid-area: main;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+  background-color: lightgreen;
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 footer {
-    background-color: lightcoral;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    padding: 5px;
-    gap: 5px;
-    grid-area: footer;
+  background-color: lightcoral;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 5px;
+  gap: 5px;
+  grid-area: footer;
 }
 
-section {
-    border: 1px solid #666;
-    background-color: rgb(255, 255, 0);
+footer section {
+  border: 1px solid #666;
+  background-color: rgb(255, 255, 0);
+}
+
+main {
+  background-color: lightgreen;
+  display: grid;
+  grid-area: boxes;
+  grid-template-columns: 1fr 4fr 1fr;
+}
+
+.box {
+  background-color: orange;
+  border: solid 1px #666;
+  margin: 5px;
+}
+
+.box-content {
+  background-color: pink;
+  border: solid 1px #666;
+  margin: 5px;
+  grid-template-columns: 3fr;
     grid-area: section;
 }
