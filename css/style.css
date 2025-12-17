@@ -9,13 +9,12 @@ body {
 .container-3 {
   border: 1px solid #333;
   min-height: 900px;
-  width: 90%;
-  margin: 20px;
+  width: 86vw;
+  margin: 0 auto;
 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
-
   /* 
     Some rules that are required for grid-areas to work:
     1. All rows need to have equal amount of values
@@ -43,20 +42,13 @@ aside {
   grid-area: sidebar;
 }
 
-main {
-  background-color: lightgreen;
-  grid-area: main;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-}
-
 footer {
   background-color: lightcoral;
-  display: grid;
   grid-template-columns: repeat(4, 1fr);
   padding: 5px;
   gap: 5px;
   grid-area: footer;
+  display: grid;
 }
 
 footer section {
