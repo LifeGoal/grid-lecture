@@ -42,10 +42,6 @@ header {
   padding: 10px;
 }
 
-header button {
-  height: 2vh;
-}
-
 header button:last-child{
   margin-left: auto;
 }
