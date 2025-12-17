@@ -83,18 +83,39 @@ aside {
   width: 100%;
 }
 
-.wrapper {
-  display: flex;
-  width: 100%;
-}
-
 @media screen and (max-width: 960px) {
   main {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  .wrapper {
-    
+  .container-3 {
+    grid-template-areas:
+    "header header header header "
+    "boxes boxes boxes boxes"
+    "section section sidebar sidebar"
+    "footer footer footer footer";
   }
   
+  footer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container-3 {
+    grid-template-areas:
+    "header header header header "
+    "boxes boxes boxes boxes"
+    "section section section section"
+    "sidebar sidebar sidebar sidebar"
+    "footer footer footer footer";
+  }
+  
+  body, main, footer {
+    grid-template-columns: 1fr;
+  }
+  
+  .box, header, .box-content, aside {
+    height: 10vh;
+  }
 }
